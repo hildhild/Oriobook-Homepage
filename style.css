@@ -1,0 +1,23 @@
+*::selection{
+    background-color: #eb5e37;
+    color: white;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+.outstanding-left {
+    display: grid;
+    grid-template-rows: 378px 466px;
+}
+
+.outstanding-right {
+    display: grid;
+    grid-template-rows: 496px 348px;
+}
+
+.footer-above {
+    display: grid;
+    grid-template-columns: 500.075px 341.45px 259.6px 338.850px;
+}

@@ -23,7 +23,7 @@
     
 </head>
 <body>
-    <header class="w-full h-[100px] bg-[#fff] grid grid-cols-3 py-[30px] px-[60px]">
+    <header class="w-full h-[100px] bg-[#fff] grid grid-cols-3 py-[30px] px-[60px] relative">
         <div class="flex items-center justify-start col-span-1">
             <a href="" class="mr-[30px] hover:text-[#eb5e37]">
                 <i class="fa-solid fa-bars text-[25px]"></i>
@@ -494,8 +494,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-1 relative mx-[15px] overflow-hidden" onmouseenter="translateX10px(11)" onmouseleave="resetTransform(11)">
-                    <div class="w-[calc(100%+20px)] ml-[-10px]">
+                <div class="col-span-1 relative mx-[15px] h-[488px] overflow-hidden" onmouseenter="translateX10px(11)" onmouseleave="resetTransform(11)">
+                    <div class="w-[calc(100%+20px)] ml-[-10px] h-full">
                         <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-18.jpg" alt="">
                     </div>
                     <div class="absolute top-[60px] left-[55px]">
@@ -550,23 +550,47 @@
         </div>
     </div>
     <div class="pictures mx-[24.6px] grid grid-cols-6 mt-[-85px] mb-[90px]">
-        <div class="col-span-1 px-[15px]">
-            <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta.jpg" alt="">
+        <div class="picture cursor-pointer col-span-1 mx-[15px] w-[215px] h-[215px] overflow-hidden relative" onmouseenter="mouseEnterPicture(0)" onmouseleave="mouseLeavePicture(0)">
+            <img class="picture-img w-full ease-in-out duration-[0.3s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta.jpg" alt="">
+            <div class="hover-picture-bg w-full h-full hidden">
+                <div class="absolute top-0 left-0 z-1 w-full h-full bg-[#000] opacity-[0.3]"></div>
+                <i class="absolute top-[calc(50%-20px/2)] left-[calc(50%-20px/2)] z-2 fa-brands fa-instagram text-[20px] text-white"></i>
+            </div>
         </div>
-        <div class="col-span-1 px-[15px]">
-            <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-2.jpg" alt="">
+        <div class="picture cursor-pointer col-span-1 mx-[15px] w-[215px] h-[215px] overflow-hidden relative" onmouseenter="mouseEnterPicture(1)" onmouseleave="mouseLeavePicture(1)">
+            <img class="picture-img w-full ease-in-out duration-[0.3s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-2.jpg" alt="">
+            <div class="hover-picture-bg w-full h-full hidden">
+                <div class="absolute top-0 left-0 z-1 w-full h-full bg-[#000] opacity-[0.3]"></div>
+                <i class="absolute top-[calc(50%-20px/2)] left-[calc(50%-20px/2)] z-2 fa-brands fa-instagram text-[20px] text-white"></i>
+            </div>
         </div>
-        <div class="col-span-1 px-[15px]">
-            <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-3.jpg" alt="">
+        <div class="picture cursor-pointer col-span-1 mx-[15px] w-[215px] h-[215px] overflow-hidden relative" onmouseenter="mouseEnterPicture(2)" onmouseleave="mouseLeavePicture(2)">
+            <img class="picture-img w-full ease-in-out duration-[0.3s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-3.jpg" alt="">
+            <div class="hover-picture-bg w-full h-full hidden">
+                <div class="absolute top-0 left-0 z-1 w-full h-full bg-[#000] opacity-[0.3]"></div>
+                <i class="absolute top-[calc(50%-20px/2)] left-[calc(50%-20px/2)] z-2 fa-brands fa-instagram text-[20px] text-white"></i>
+            </div>
         </div>
-        <div class="col-span-1 px-[15px]">
-            <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-4.jpg" alt="">
+        <div class="picture cursor-pointer col-span-1 mx-[15px] w-[215px] h-[215px] overflow-hidden relative" onmouseenter="mouseEnterPicture(3)" onmouseleave="mouseLeavePicture(3)">
+            <img class="picture-img w-full ease-in-out duration-[0.3s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-4.jpg" alt="">
+            <div class="hover-picture-bg w-full h-full hidden">
+                <div class="absolute top-0 left-0 z-1 w-full h-full bg-[#000] opacity-[0.3]"></div>
+                <i class="absolute top-[calc(50%-20px/2)] left-[calc(50%-20px/2)] z-2 fa-brands fa-instagram text-[20px] text-white"></i>
+            </div>
         </div>
-        <div class="col-span-1 px-[15px]">
-            <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-5.jpg" alt="">
+        <div class="picture cursor-pointer col-span-1 mx-[15px] w-[215px] h-[215px] overflow-hidden relative" onmouseenter="mouseEnterPicture(4)" onmouseleave="mouseLeavePicture(4)">
+            <img class="picture-img w-full ease-in-out duration-[0.3s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-5.jpg" alt="">
+            <div class="hover-picture-bg w-full h-full hidden">
+                <div class="absolute top-0 left-0 z-1 w-full h-full bg-[#000] opacity-[0.3]"></div>
+                <i class="absolute top-[calc(50%-20px/2)] left-[calc(50%-20px/2)] z-2 fa-brands fa-instagram text-[20px] text-white"></i>
+            </div>
         </div>
-        <div class="col-span-1 px-[15px]">
-            <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-6.jpg" alt="">
+        <div class="picture cursor-pointer col-span-1 mx-[15px] w-[215px] h-[215px] overflow-hidden relative" onmouseenter="mouseEnterPicture(5)" onmouseleave="mouseLeavePicture(5)">
+            <img class="picture-img w-full ease-in-out duration-[0.3s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/insta-6.jpg" alt="">
+            <div class="hover-picture-bg w-full h-full hidden">
+                <div class="absolute top-0 left-0 z-1 w-full h-full bg-[#000] opacity-[0.3]"></div>
+                <i class="absolute top-[calc(50%-20px/2)] left-[calc(50%-20px/2)] z-2 fa-brands fa-instagram text-[20px] text-white"></i>
+            </div>
         </div>
     </div>
     <footer class="h-[491.5px] mx-[24.6px]">

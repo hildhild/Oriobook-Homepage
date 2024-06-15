@@ -118,3 +118,17 @@ function mouseLeaveBook(index) {
         }
     }
 }
+
+function mouseEnterPicture(index) {
+    var effectedElements = document.getElementsByClassName('hover-picture-bg');
+    var picture = document.getElementsByClassName('picture-img');
+    effectedElements[index].style.display = "block";
+    picture[index].style.transform = "scale(1.2)";
+}
+
+function mouseLeavePicture(index) {
+    var effectedElements = document.getElementsByClassName('hover-picture-bg');
+    var picture = document.getElementsByClassName('picture-img');
+    effectedElements[index].style.display = "none";
+    picture[index].style.transform = "none";
+}

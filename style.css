@@ -8,6 +8,10 @@ input, button {
     outline: none;
 }
 
+header {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+}
+
 .outstanding-left {
     display: grid;
     grid-template-rows: 378px 466px;

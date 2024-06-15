@@ -28,9 +28,9 @@
             <a href="" class="mr-[30px] hover:text-[#eb5e37]">
                 <i class="fa-solid fa-bars text-[25px]"></i>
             </a>
-            <div class="flex items-center hover:text-[#eb5e37] cursor-pointer">
+            <div class="flex items-center justify-center text-[#242424] hover:text-[#eb5e37] cursor-pointer">
                 <i class="fa-solid fa-table-cells-large mr-[13px] text-[14px]"></i>
-                <div class="text-[13px]">BROWSE CATEGORY</div>
+                <div class="text-[14px]">BROWSE CATEGORY</div>
                 <i class="fa-solid fa-angle-down ml-[15px] text-[12px]"></i>
             </div>
         </div>
@@ -44,7 +44,7 @@
                 <i class="fa-solid text-[20px] fa-magnifying-glass"></i>
             </button>
             <!-- Modal -->
-            <dialog id="searchModal" class="w-[80vw] h-[192.6px] px-[90px] py-[70px] relative">
+            <dialog id="searchModal" class="w-[80vw] h-[192.6px] px-[90px] py-[70px] fixed">
                 <div class="absolute top-[20px] right-[20px]">
                     <form method="dialog">
                         <button class="text-[20px] hover:rotate-90 duration-[0.5s]">✕</button>
@@ -169,11 +169,31 @@
         <div class="picked-by-reader mx-[24.6px] px-[15px] pb-[65px] h-[688px]">
             <h2 class="flex justify-center font-lora text-4xl h-[36px] mb-[70px]">Picked by Readers</h2>
             <div class="grid grid-cols-5 mx-[-4px]">
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(0)" onmouseleave="resetPicture(0)">
-                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
+                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(0)" onmouseleave="mouseLeaveBook(0)">
+                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
                         <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-1.jpg" alt="">
                         <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] mb-[5px] text-[13px] grid content-center justify-center">HOT</div>
                         <div class="absolute top-[70px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">28%</div>
+                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                    <span class="tooltiptext grid place-content-center">Quick View</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="mb-[2px]">
@@ -185,10 +205,30 @@
                         <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">90.00$</del>65.00$</div>
                     </div>
                 </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(1)" onmouseleave="resetPicture(1)">
+                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(1)" onmouseleave="mouseLeaveBook(1)">
                     <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
                         <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-109.jpg" alt="">
                         <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">HOT</div>
+                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                    <span class="tooltiptext grid place-content-center">Quick View</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="mb-[2px]">
@@ -200,10 +240,30 @@
                         <div class="text-[14px] text-[#242424]">200.00$</div>
                     </div>
                 </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(2)" onmouseleave="resetPicture(2)">
+                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(2)" onmouseleave="mouseLeaveBook(2)">
                     <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
                         <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-4.jpg" alt="">
                         <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">HOT</div>
+                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-arrow-right border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">View products</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                    <span class="tooltiptext grid place-content-center">Quick View</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="mb-[2px]">
@@ -215,9 +275,29 @@
                         <div class="text-[14px] text-[#242424]">25.00$ - 65.00$</div>
                     </div>
                 </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(3)" onmouseleave="resetPicture(3)">
-                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8]">
+                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(3)" onmouseleave="mouseLeaveBook(3)">
+                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
                         <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-22.jpg" alt="">
+                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                    <span class="tooltiptext grid place-content-center">Quick View</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="mb-[2px]">
@@ -229,10 +309,30 @@
                         <div class="text-[14px] text-[#242424]">150.00$</div>
                     </div>
                 </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(4)" onmouseleave="resetPicture(4)">
+                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(4)" onmouseleave="mouseLeaveBook(4)">
                     <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
                         <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-14.jpg" alt="">
                         <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">17%</div>
+                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                </div>
+                            </div>
+                            <div class="col-span-1 grid content-center ">
+                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                    <span class="tooltiptext grid place-content-center">Quick View</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="mb-[2px]">
@@ -246,84 +346,158 @@
                 </div>
             </div>
         </div>
-        <div class="hot-category grid grid-cols-3 mx-[24.6px] h-[700.287px] pb-[110px]">
-            <div class="col-span-1 relative mx-[15px]">
-                <img class="h-full" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner.jpg" alt="">
-                <p class="text-[22px] absolute left-[40px] bottom-[25px]">Romance</p>
+        <div class="hot-category grid grid-cols-3 mx-[24.6px] h-[700.287px] pb-[110px] mb-[15px]">
+            <div class="col-span-1 relative mx-[15px] overflow-hidden" onmouseenter="translateX10px(6)" onmouseleave="resetTransform(6)">
+                <div class="w-[calc(100%+20px)] ml-[-10px]">
+                    <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner.jpg" alt="">
+                </div>
+                <div class="text-[22px] absolute left-[40px] bottom-[60px]">Romance</div>
             </div>
             <div class="col-span-1 grid grid-rows-2 px-[15px]">
-                <div class="row-span-1 relative mb-[30px]">
-                    <img class="h-full" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-2.jpg" alt="">
-                    <p class="text-[22px] absolute left-[40px] bottom-[25px]">Fiction</p>
+                <div class="row-span-1 relative mb-[30px] overflow-hidden" onmouseenter="translateX10px(7)" onmouseleave="resetTransform(7)">
+                    <div class="w-[calc(100%+20px)] ml-[-10px]">
+                        <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-2.jpg" alt="">
+                    </div>
+                    <p class="text-[22px] absolute left-[40px] bottom-[30px]">Fiction</p>
                 </div>
-                <div class="row-span-1 relative">
-                    <img class="h-full" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-4.jpg" alt="">
-                    <p class="text-[22px] absolute left-[40px] bottom-[25px]">Comedy</p>
+                <div class="row-span-1 relative overflow-hidden" onmouseenter="translateX10px(8)" onmouseleave="resetTransform(8)">
+                    <div class="w-[calc(100%+20px)] ml-[-10px]">
+                        <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-4.jpg" alt="">
+                    </div>
+                    <p class="text-[22px] absolute left-[40px] bottom-[60px]">Comedy</p>
                 </div>
             </div>
             <div class="col-span-1 grid grid-rows-2 px-[15px]">
-                <div class="row-span-1 relative mb-[30px]">
-                    <img class="h-full" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-3.jpg" alt="">
-                    <p class="text-[22px] absolute left-[40px] bottom-[25px]">Family story</p>
+                <div class="row-span-1 relative mb-[30px] overflow-hidden" onmouseenter="translateX10px(9)" onmouseleave="resetTransform(9)">
+                    <div class="w-[calc(100%+20px)] ml-[-10px]">
+                        <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-3.jpg" alt="">
+                    </div>
+                    <p class="text-[22px] absolute left-[40px] bottom-[30px]">Family story</p>
                 </div>
-                <div class="row-span-1 relative">
-                    <img class="h-full" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-5.jpg" alt="">
-                    <p class="text-[22px] absolute left-[40px] bottom-[25px]">History</p>
+                <div class="row-span-1 relative overflow-hidden" onmouseenter="translateX10px(10)" onmouseleave="resetTransform(10)">
+                    <div class="w-[calc(100%+20px)] ml-[-10px]">
+                        <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-5.jpg" alt="">
+                    </div>
+                    <p class="text-[22px] absolute left-[40px] bottom-[60px]">History</p>
                 </div>
             </div>
         </div>
         <div class="monthly-bestseller mx-[24.6px] pb-[115px]">
             <div class="h-[91.6px] pb-[45px] flex justify-between px-[15px]">
                 <h1 class="font-lora text-[36px]">Monthly Bestseller</h1>
-                <button class="border-[0.8px] px-[55px] border-[#24242433] h-[50px] w-[173.662px] text-sm text-[#242424] hover:text-white hover:bg-[#eb5e37]">VIEW ALL</button>
+                <button class="border-solid border-[0.8px] px-[55px] border-[#24242433] h-[50px] w-[173.662px] text-[13px] text-[#242424] hover:text-white hover:bg-[#eb5e37]">VIEW ALL</button>
             </div>
             <div class="grid grid-cols-3">
                 <div class="col-span-2 grid grid-cols-3 px-[15px]">
-                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(5)" onmouseleave="resetPicture(5)">
-                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8]">
-                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-14.jpg" alt="">
+                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(5)" onmouseleave="mouseLeaveBook(5)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-3.jpg" alt="">
+                            <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">25%</div>
+                            <div class="absolute top-[40px] right-[40px] bg-[#fff] text-[#242424] w-[76.088px] h-[25px] px-[10px] text-[10px] grid content-center justify-center">PRE ORDER</div>
+                            <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center w-full">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center w-full">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center w-full">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <div class="mb-[2px]">
-                                <a class="text-[#242424cc] text-[12px]" href="">DAN GORDON</a>
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">BO ERIKSSON</a>
                             </div>
                             <div class="mb-[2px]">
-                                <a class="font-lora text-base" href="">Emotionally Intelligent</a>
+                                <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">Truffle Fever</a>
                             </div>
-                            <p class="text-sm"><del class="mr-[4px] text-sm">90.00$</del>65.00$</p>
+                            <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">200.00$</del>150.00$</div>
                         </div>
                     </div>
-                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(6)" onmouseleave="resetPicture(6)">
-                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8]">
-                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-14.jpg" alt="">
+                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(6)" onmouseleave="mouseLeaveBook(6)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-98.jpg" alt="">
+                            <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <div class="mb-[2px]">
-                                <a class="text-[#242424cc] text-[12px]" href="">DAN GORDON</a>
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
                             </div>
                             <div class="mb-[2px]">
-                                <a class="font-lora text-base" href="">Emotionally Intelligent</a>
+                                <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">The Sky Of Peace</a>
                             </div>
-                            <p class="text-sm"><del class="mr-[4px] text-sm">90.00$</del>65.00$</p>
+                            <div class="text-[14px] text-[#242424]">150.00$</div>
                         </div>
                     </div>
-                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="changePicture(7)" onmouseleave="resetPicture(7)">
-                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8]">
-                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-14.jpg" alt="">
+                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(7)" onmouseleave="mouseLeaveBook(7)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-2.jpg" alt="">
+                            <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <div class="mb-[2px]">
-                                <a class="text-[#242424cc] text-[12px]" href="">DAN GORDON</a>
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
                             </div>
                             <div class="mb-[2px]">
-                                <a class="font-lora text-base" href="">Emotionally Intelligent</a>
+                                <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">The Friday Drink</a>
                             </div>
-                            <p class="text-sm"><del class="mr-[4px] text-sm">90.00$</del>65.00$</p>
+                            <div class="text-[14px] text-[#242424]">50.00$</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-1 px-[15px] relative">
-                    <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-18.jpg" alt="">
+                <div class="col-span-1 relative mx-[15px] overflow-hidden" onmouseenter="translateX10px(11)" onmouseleave="resetTransform(11)">
+                    <div class="w-[calc(100%+20px)] ml-[-10px]">
+                        <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-18.jpg" alt="">
+                    </div>
                     <div class="absolute top-[60px] left-[55px]">
                         <div class="mb-[8px] text-[12px]">NOVEL</div>
                         <div class="font-lora mb-[8px] text-[32px]">SEO Book</div>
@@ -334,8 +508,10 @@
             </div>
         </div>
         <div class="lastest-newsletter grid grid-cols-2 mx-[24.6px] items-center">
-            <div class="col-span-1 px-[15px]">
-                <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-26.jpg" alt="">
+            <div class="col-span-1 relative mx-[15px] overflow-hidden" onmouseenter="translateX10px(12)" onmouseleave="resetTransform(12)">
+                <div class="w-[calc(100%+20px)] ml-[-10px]">
+                    <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-26.jpg" alt="">
+                </div>
             </div>
             <div class="col-span-1 pr-[15px] pl-[105px]">
                 <div class="text-[16px] mb-[20px]">LASTEST NEWSLETTER</div>
@@ -352,22 +528,22 @@
         </div>
         <div class="policies mx-[24.6px] pt-[115px] pb-[190px] h-[508px] grid grid-cols-4">
             <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
-                <i class="fa-solid text-[40px] fa-truck mb-[30px]"></i>
+                <i class="icon-shake fa-solid text-[40px] fa-truck mb-[30px]"></i>
                 <div class="font-lora text-[22px] mb-[20px]">Free Standard Delivery</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
             <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
-                <i class="fa-solid text-[40px] fa-rotate-left mb-[30px]"></i>
+                <i class="icon-shake fa-solid text-[40px] fa-rotate-left mb-[30px]"></i>
                 <div class="font-lora text-[22px] mb-[20px]">Free Easy Returns</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
             <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
-                <i class="fa-solid text-[40px] fa-book-open mb-[30px]"></i>
+                <i class="icon-shake fa-solid text-[40px] fa-book-open mb-[30px]"></i>
                 <div class="font-lora text-[22px] mb-[20px]">6 Million Books Availabley</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
             <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
-                <i class="fa-solid text-[40px] fa-percent mb-[30px]"></i>
+                <i class="icon-shake fa-solid text-[40px] fa-percent mb-[30px]"></i>
                 <div class="font-lora text-[22px] mb-[20px]">Special Discounts</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
@@ -450,16 +626,16 @@
                 <div class="font-bold text-[22px] text-[#242424] font-lora pb-[50px]">Social media</div>
                 <div class="grid grid-cols-4 pb-[50px] w-[50%]">
                     <a class="col-span-1 hover:text-[#eb5e37]" href="">
-                        <i class="text-[13px] fa-brands fa-twitter"></i>
+                        <i class="text-[14px] fa-brands fa-twitter"></i>
                     </a>
                     <a class="col-span-1 hover:text-[#eb5e37]" href="">
-                        <i class="text-[13px] fa-brands fa-instagram"></i>
+                        <i class="text-[14px] fa-brands fa-instagram"></i>
                     </a>
                     <a class="col-span-1 hover:text-[#eb5e37]" href="">
-                        <i class="text-[13px] fa-brands fa-facebook-f"></i>
+                        <i class="text-[14px] fa-brands fa-facebook-f"></i>
                     </a>
                     <a class="col-span-1 hover:text-[#eb5e37]" href="">
-                        <i class="text-[13px] fa-solid fa-basketball"></i>
+                        <i class="text-[14px] fa-solid fa-basketball"></i>
                     </a>
                 </div>
                 <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/06/img-3.png" alt="">

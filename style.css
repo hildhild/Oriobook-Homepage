@@ -22,6 +22,22 @@ header {
     grid-template-rows: 496px 348px;
 }
 
+.swiper-container .swiper-slide:nth-child(-n+5) {
+    display: block;
+}
+
+.swiper-container-1 .swiper-slide:nth-child(-n+3) {
+    display: block;
+}
+
+.swiper-container, .swiper-container-1 {
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: none;
+}
+
 .tooltip {
     position: relative;
     display: inline-block;

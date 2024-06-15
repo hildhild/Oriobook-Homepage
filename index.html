@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Jost"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <style>
         body {
             font-family: "Jost", sans-serif;
@@ -20,6 +22,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
 </head>
 <body>
@@ -168,183 +171,222 @@
         </div>
         <div class="picked-by-reader mx-[24.6px] px-[15px] pb-[65px] h-[688px]">
             <h2 class="flex justify-center font-lora text-4xl h-[36px] mb-[70px]">Picked by Readers</h2>
-            <div class="grid grid-cols-5 mx-[-4px]">
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(0)" onmouseleave="mouseLeaveBook(0)">
-                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
-                        <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-1.jpg" alt="">
-                        <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] mb-[5px] text-[13px] grid content-center justify-center">HOT</div>
-                        <div class="absolute top-[70px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">28%</div>
-                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
+            <div class="swiper-container mx-[-4px] w-full">
+                <div class="grid grid-cols-5 swiper-wrapper">
+                    <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(0)" onmouseleave="mouseLeaveBook(0)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                            <img class="book-img-0 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-1.jpg" alt="">
+                            <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] mb-[5px] text-[13px] grid content-center justify-center">HOT</div>
+                            <div class="absolute top-[70px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">28%</div>
+                            <div class="grid opacity-0 list-buttons-book-0 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
-                                </div>
+                        </div>
+                        <div>
+                            <div class="mb-[2px]">
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
                             </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                    <span class="tooltiptext grid place-content-center">Quick View</span>
-                                </div>
+                            <div class="mb-[2px]">
+                                <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Emotionally Intelligent</a>
                             </div>
+                            <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">90.00$</del>65.00$</div>
                         </div>
                     </div>
-                    <div>
-                        <div class="mb-[2px]">
-                            <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
-                        </div>
-                        <div class="mb-[2px]">
-                            <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Emotionally Intelligent</a>
-                        </div>
-                        <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">90.00$</del>65.00$</div>
-                    </div>
-                </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(1)" onmouseleave="mouseLeaveBook(1)">
-                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
-                        <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-109.jpg" alt="">
-                        <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">HOT</div>
-                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
+                    <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(1)" onmouseleave="mouseLeaveBook(1)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
+                            <img class="book-img-1 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-109.jpg" alt="">
+                            <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">HOT</div>
+                            <div class="grid opacity-0 list-buttons-book-1 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                    <span class="tooltiptext grid place-content-center">Quick View</span>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="mb-[2px]">
-                            <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
-                        </div>
-                        <div class="mb-[2px]">
-                            <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">The Hidden House</a>
-                        </div>
-                        <div class="text-[14px] text-[#242424]">200.00$</div>
-                    </div>
-                </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(2)" onmouseleave="mouseLeaveBook(2)">
-                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
-                        <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-4.jpg" alt="">
-                        <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">HOT</div>
-                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-arrow-right border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">View products</span>
-                                </div>
+                        <div>
+                            <div class="mb-[2px]">
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
                             </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
-                                </div>
+                            <div class="mb-[2px]">
+                                <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">The Hidden House</a>
                             </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                    <span class="tooltiptext grid place-content-center">Quick View</span>
-                                </div>
-                            </div>
+                            <div class="text-[14px] text-[#242424]">200.00$</div>
                         </div>
                     </div>
-                    <div>
-                        <div class="mb-[2px]">
-                            <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
-                        </div>
-                        <div class="mb-[2px]">
-                            <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Aunt Paula Cat's Cafe</a>
-                        </div>
-                        <div class="text-[14px] text-[#242424]">25.00$ - 65.00$</div>
-                    </div>
-                </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(3)" onmouseleave="mouseLeaveBook(3)">
-                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
-                        <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-22.jpg" alt="">
-                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
+                    <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(2)" onmouseleave="mouseLeaveBook(2)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
+                            <img class="book-img-2 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-4.jpg" alt="">
+                            <div class="absolute top-[40px] left-[40px] bg-[#eb5e37] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">HOT</div>
+                            <div class="grid opacity-0 list-buttons-book-2 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-arrow-right border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">View products</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                    <span class="tooltiptext grid place-content-center">Quick View</span>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="mb-[2px]">
-                            <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
-                        </div>
-                        <div class="mb-[2px]">
-                            <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Wedding Trouble</a>
-                        </div>
-                        <div class="text-[14px] text-[#242424]">150.00$</div>
-                    </div>
-                </div>
-                <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(4)" onmouseleave="mouseLeaveBook(4)">
-                    <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
-                        <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-14.jpg" alt="">
-                        <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">17%</div>
-                        <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Add to cart</span>
-                                </div>
+                        <div>
+                            <div class="mb-[2px]">
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
                             </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                    <span class="tooltiptext grid place-content-center">Wishlist</span>
-                                </div>
+                            <div class="mb-[2px]">
+                                <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Aunt Paula Cat's Cafe</a>
                             </div>
-                            <div class="col-span-1 grid content-center ">
-                                <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                    <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                    <span class="tooltiptext grid place-content-center">Quick View</span>
-                                </div>
-                            </div>
+                            <div class="text-[14px] text-[#242424]">25.00$ - 65.00$</div>
                         </div>
                     </div>
-                    <div>
-                        <div class="mb-[2px]">
-                            <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
+                    <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(3)" onmouseleave="mouseLeaveBook(3)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
+                            <img class="book-img-3 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-22.jpg" alt="">
+                            <div class="grid opacity-0 list-buttons-book-3 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-[2px]">
-                            <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Malstrom</a>
+                        <div>
+                            <div class="mb-[2px]">
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
+                            </div>
+                            <div class="mb-[2px]">
+                                <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Wedding Trouble</a>
+                            </div>
+                            <div class="text-[14px] text-[#242424]">150.00$</div>
                         </div>
-                        <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">30.00$</del>25.00$</div>
+                    </div>
+                    <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(4)" onmouseleave="mouseLeaveBook(4)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
+                            <img class="book-img-4 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/04/product-14.jpg" alt="">
+                            <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">17%</div>
+                            <div class="grid opacity-0 list-buttons-book-4 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-[2px]">
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">NADYA TOLOKO</a>
+                            </div>
+                            <div class="mb-[2px]">
+                                <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Malstrom</a>
+                            </div>
+                            <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">30.00$</del>25.00$</div>
+                        </div>
+                    </div>
+                    <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(5)" onmouseleave="mouseLeaveBook(5)">
+                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative">
+                            <img class="book-img-5 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-23.jpg" alt="">
+                            <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">33%</div>
+                            <div class="absolute top-[40px] right-[40px] bg-[#fff] text-[#242424] w-[94.525px] h-[25px] px-[10px] text-[10px] grid content-center justify-center">OUT OF STOCK</div>
+                            <div class="grid opacity-0 list-buttons-book-5 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid content-center ">
+                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-[2px]">
+                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">MARIA-PIA GO</a>
+                            </div>
+                            <div class="mb-[2px]">
+                                <a class="font-lora text-[15px] text-[#242424] hover:text-[#eb5e37]" href="">Swallow's Flight</a>
+                            </div>
+                            <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">150.00$</del>100.00$</div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
         <div class="hot-category grid grid-cols-3 mx-[24.6px] h-[700.287px] pb-[110px] mb-[15px]">
             <div class="col-span-1 relative mx-[15px] overflow-hidden" onmouseenter="translateX10px(6)" onmouseleave="resetTransform(6)">
@@ -388,109 +430,146 @@
                 <button class="border-solid border-[0.8px] px-[55px] border-[#24242433] h-[50px] w-[173.662px] text-[13px] text-[#242424] hover:text-white hover:bg-[#eb5e37]">VIEW ALL</button>
             </div>
             <div class="grid grid-cols-3">
-                <div class="col-span-2 grid grid-cols-3 px-[15px]">
-                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(5)" onmouseleave="mouseLeaveBook(5)">
-                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
-                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-3.jpg" alt="">
-                            <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">25%</div>
-                            <div class="absolute top-[40px] right-[40px] bg-[#fff] text-[#242424] w-[76.088px] h-[25px] px-[10px] text-[10px] grid content-center justify-center">PRE ORDER</div>
-                            <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                                <div class="col-span-1 grid content-center w-full">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
-                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                <div class="col-span-2 px-[15px] swiper-container-1">
+                    <div class="grid grid-cols-3 swiper-wrapper">
+                        <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(6)" onmouseleave="mouseLeaveBook(6)">
+                            <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                                <img class="book-img-6 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-3.jpg" alt="">
+                                <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">25%</div>
+                                <div class="absolute top-[40px] right-[40px] bg-[#fff] text-[#242424] w-[76.088px] h-[25px] px-[10px] text-[10px] grid content-center justify-center">PRE ORDER</div>
+                                <div class="grid opacity-0 list-buttons-book-6 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                    <div class="col-span-1 grid content-center w-full">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 grid content-center w-full">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 grid content-center w-full">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                            <span class="tooltiptext grid place-content-center">Quick View</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-span-1 grid content-center w-full">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
-                                    </div>
+                            </div>
+                            <div>
+                                <div class="mb-[2px]">
+                                    <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">BO ERIKSSON</a>
                                 </div>
-                                <div class="col-span-1 grid content-center w-full">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                        <span class="tooltiptext grid place-content-center">Quick View</span>
-                                    </div>
+                                <div class="mb-[2px]">
+                                    <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">Truffle Fever</a>
                                 </div>
+                                <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">200.00$</del>150.00$</div>
                             </div>
                         </div>
-                        <div>
-                            <div class="mb-[2px]">
-                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">BO ERIKSSON</a>
-                            </div>
-                            <div class="mb-[2px]">
-                                <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">Truffle Fever</a>
-                            </div>
-                            <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">200.00$</del>150.00$</div>
-                        </div>
-                    </div>
-                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(6)" onmouseleave="mouseLeaveBook(6)">
-                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
-                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-98.jpg" alt="">
-                            <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                                <div class="col-span-1 grid content-center ">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
-                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
+                        <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(7)" onmouseleave="mouseLeaveBook(7)">
+                            <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                                <img class="book-img-7 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-98.jpg" alt="">
+                                <div class="grid opacity-0 list-buttons-book-7 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-span-1 grid content-center ">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-span-1 grid content-center ">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                        <span class="tooltiptext grid place-content-center">Quick View</span>
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                            <span class="tooltiptext grid place-content-center">Quick View</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="mb-[2px]">
-                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
-                            </div>
-                            <div class="mb-[2px]">
-                                <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">The Sky Of Peace</a>
-                            </div>
-                            <div class="text-[14px] text-[#242424]">150.00$</div>
-                        </div>
-                    </div>
-                    <div class="col-span-1 h-[517px] px-[4px]" onmouseenter="mouseEnterBook(7)" onmouseleave="mouseLeaveBook(7)">
-                        <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
-                            <img class="book-img cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-2.jpg" alt="">
-                            <div class="grid opacity-0 list-buttons-book bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
-                                <div class="col-span-1 grid content-center ">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
-                                        <span class="tooltiptext grid place-content-center">Add to cart</span>
-                                    </div>
+                            <div>
+                                <div class="mb-[2px]">
+                                    <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
                                 </div>
-                                <div class="col-span-1 grid content-center ">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
-                                        <span class="tooltiptext grid place-content-center">Wishlist</span>
-                                    </div>
+                                <div class="mb-[2px]">
+                                    <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">The Sky Of Peace</a>
                                 </div>
-                                <div class="col-span-1 grid content-center ">
-                                    <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
-                                        <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
-                                        <span class="tooltiptext grid place-content-center">Quick View</span>
-                                    </div>
-                                </div>
+                                <div class="text-[14px] text-[#242424]">150.00$</div>
                             </div>
                         </div>
-                        <div>
-                            <div class="mb-[2px]">
-                                <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
+                        <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(8)" onmouseleave="mouseLeaveBook(8)">
+                            <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                                <img class="book-img-8 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-2.jpg" alt="">
+                                <div class="grid opacity-0 list-buttons-book-8 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                            <span class="tooltiptext grid place-content-center">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-[2px]">
-                                <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">The Friday Drink</a>
+                            <div>
+                                <div class="mb-[2px]">
+                                    <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">DAN GORDON</a>
+                                </div>
+                                <div class="mb-[2px]">
+                                    <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">The Friday Drink</a>
+                                </div>
+                                <div class="text-[14px] text-[#242424]">50.00$</div>
                             </div>
-                            <div class="text-[14px] text-[#242424]">50.00$</div>
+                        </div>
+                        <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(9)" onmouseleave="mouseLeaveBook(9)">
+                            <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
+                                <img class="book-img-9 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2020/12/product-76.jpg" alt="">
+                                <div class="absolute top-[40px] left-[40px] bg-[#2FA9A6] text-white w-[50px] h-[25px] px-[7px] text-[13px] grid content-center justify-center">17%</div>
+                                <div class="grid opacity-0 list-buttons-book-9 bg-white w-[calc(100%-40px)] h-[50px] px-[15px] absolute left-[20px] bottom-[-35px] grid-cols-3">
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-cart-shopping border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Add to cart</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-heart border-r-[2px]"></i>
+                                            <span class="tooltiptext grid place-content-center">Wishlist</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 grid content-center ">
+                                        <div class="tooltip w-full text-center cursor-pointer hover:text-[#eb5e37]">
+                                            <i class="w-full text-[18px] fa-solid fa-magnifying-glass"></i>
+                                            <span class="tooltiptext grid place-content-center">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-[2px]">
+                                    <a class="text-[#242424cc] text-[13px] hover:text-[#eb5e37]" href="">BO ERIKSSON</a>
+                                </div>
+                                <div class="mb-[2px]">
+                                    <a class="font-lora text-[16px] text-[#242424] hover:text-[#eb5e37]" href="">I Don't Forget Anyone</a>
+                                </div>
+                                <div class="text-[14px] text-[#242424]"><del class="mr-[4px]">120.00$</del>100.00$</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -671,6 +750,21 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 5,
+          spaceBetween: 15,
+          loop: true,
+          keyboard: true,
+        });
+        var swiper1 = new Swiper('.swiper-container-1', {
+            slidesPerView: 3,
+            spaceBetween: 15,
+            loop: true,
+            keyboard: true,
+          });
+    </script>
     <script src="./index.js"></script>
 </body>
 </html>

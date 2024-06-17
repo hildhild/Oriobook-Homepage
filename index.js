@@ -1,3 +1,60 @@
+function showMenuModal() {
+    var menuModal = document.getElementsByClassName("menu-modal")[0];
+    menuModal.classList.remove("hidden");
+    menuModal.classList.add("flex");
+}
+
+function hideMenuModal() {
+    var menuModal = document.getElementsByClassName("menu-modal")[0];
+    menuModal.classList.remove("flex");
+    menuModal.classList.add("hidden");
+}
+
+
+function showSearchModal() {
+    var searchModal = document.getElementsByClassName("search-modal")[0];
+    searchModal.classList.remove("hidden");
+    searchModal.classList.add("flex");
+}
+
+function hideSearchModal() {
+    var searchModal = document.getElementsByClassName("search-modal")[0];
+    searchModal.classList.remove("flex");
+    searchModal.classList.add("hidden");
+}
+
+function showAccountModal() {
+    var accountModal = document.getElementsByClassName("account-modal")[0];
+    accountModal.classList.remove("hidden");
+    accountModal.classList.add("flex");
+}
+
+function hideAccountModal() {
+    var accountModal = document.getElementsByClassName("account-modal")[0];
+    accountModal.classList.remove("flex");
+    accountModal.classList.add("hidden");
+}
+
+function showCartModal() {
+    var cartModal = document.getElementsByClassName("cart-modal")[0];
+    var body = document.getElementsByTagName("body")[0];
+    cartModal.classList.remove("hidden");
+    cartModal.classList.add("flex");
+    body.classList.add("overflow-hidden");
+}
+
+function hideCartModal() {
+    var cartModal = document.getElementsByClassName("cart-modal")[0];
+    var body = document.getElementsByTagName("body")[0];
+    cartModal.classList.remove("flex");
+    cartModal.classList.add("hidden");
+    body.classList.remove("overflow-hidden");
+}
+
+function stopPropagation(event) {
+    event.stopPropagation();
+}
+
 function translateX10px(index) {
     var translateX10px = document.getElementsByClassName('translateX10px');
     translateX10px[index].style.transform = 'translateX(10px)';

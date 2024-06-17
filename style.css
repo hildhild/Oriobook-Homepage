@@ -12,6 +12,24 @@ header {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
 }
 
+.menu-close-btn {
+    box-shadow: rgba(36, 36, 36, 0.05) 0px 1px 12px 2px;
+}
+
+.nav-btn:hover .nav-btn-icon {
+    display: flex;
+}
+
+.cart-modal.flex .cart-modal-container,
+.account-modal.flex .account-modal-container{
+    animation: cartAccountShow ease 0.5s;
+}
+
+.cart-modal.hidden .cart-modal-container,
+.account-modal.hidden .account-modal-container {
+    animation: cartAccountHide ease 0.5s;
+}
+
 .outstanding-left {
     display: grid;
     grid-template-rows: 378px 466px;
@@ -89,6 +107,24 @@ header {
 .footer-above {
     display: grid;
     grid-template-columns: 500.075px 341.45px 259.6px 338.850px;
+}
+
+@keyframes cartAccountShow {
+    from {
+        transform: translateX(543.400px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes cartAccountHide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(543.400px);
+    }
 }
 
 @keyframes shake {

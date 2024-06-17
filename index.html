@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Jost"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+
     <style>
         body {
             font-family: "Jost", sans-serif;
@@ -25,18 +26,90 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     
 </head>
 <body>
     <header class="w-full h-[100px] bg-[#fff] grid grid-cols-3 py-[30px] px-[60px] relative">
         <div class="flex items-center justify-start col-span-1">
-            <a href="" class="mr-[30px] hover:text-[#eb5e37]">
+            <button href="" class="mr-[30px] hover:text-[#eb5e37]" onclick="showMenuModal()">
                 <i class="fa-solid fa-bars text-[25px]"></i>
-            </a>
-            <div class="flex items-center justify-center text-[#242424] hover:text-[#eb5e37] cursor-pointer">
+            </button>
+            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"  class="flex items-center justify-center text-[#242424] hover:text-[#eb5e37] cursor-pointer">
                 <i class="fa-solid fa-table-cells-large mr-[13px] text-[14px]"></i>
                 <div class="text-[14px]">BROWSE CATEGORY</div>
-                <i class="fa-solid fa-angle-down ml-[15px] text-[12px]"></i>
+                <i class="fa-solid fa-caret-down ml-[15px] text-[12px]"></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownDivider" class="w-[250px] z-10 hidden bg-white divide-y divide-gray-100">
+                <div class="mt-[30px] h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                    <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                        <i class="fa-solid fa-rocket"></i>
+                        Fiction
+                    </a>
+                </div>
+                <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                    <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                        <i class="fa-solid fa-book-open"></i>
+                        Horror
+                    </a>
+                </div>
+                <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                    <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                        <i class="fa-solid fa-book"></i>
+                        Classics
+                    </a>
+                </div>
+                <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                    <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                        <i class="fa-solid fa-palette"></i>
+                        Arts & Photography
+                    </a>
+                </div>
+                <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                    <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                        <i class="fa-solid fa-book-open"></i>
+                        History
+                    </a>
+                </div>
+                <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                    <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                        <i class="fa-solid fa-masks-theater"></i>
+                        Comedy
+                    </a>
+                </div>
+                <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                    <a id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider1"  href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                        <i class="fa-solid fa-plus"></i>
+                        Other
+                    </a>
+                </div>
+                <div id="dropdownDivider1" class="w-[250px] z-10 hidden bg-white divide-y divide-gray-100">
+                    <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                        <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                            <i class="fa-regular fa-compass"></i>
+                            Adventure
+                        </a>
+                    </div>
+                    <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                        <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                            <i class="fa-regular fa-compass"></i>
+                            Biographies
+                        </a>
+                    </div>
+                    <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                        <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                            <i class="fa-solid fa-heart"></i>
+                            Romance
+                        </a>
+                    </div>
+                    <div class="h-[51.4px] w-[250px] px-[30px] py-[11.7px]">
+                        <a href="#" class="text-[16px] text-[#242424] block hover:text-[#eb5e37] bg-white">
+                            <i class="fa-solid fa-people-roof"></i>
+                            Family Story
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-span-1 flex justify-center items-center">
@@ -45,36 +118,22 @@
             </a>
         </div>
         <div class="flex justify-end items-center col-span-1">
-            <button class="hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="searchModal.showModal()">
+            <button class="hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="showSearchModal()">
                 <i class="fa-solid text-[20px] fa-magnifying-glass"></i>
             </button>
-            <!-- Modal -->
-            <dialog id="searchModal" class="w-[80vw] h-[192.6px] px-[90px] py-[70px] fixed">
-                <div class="absolute top-[20px] right-[20px]">
-                    <form method="dialog">
-                        <button class="text-[20px] hover:rotate-90 duration-[0.5s]">✕</button>
-                    </form>
-                </div>
-                    <input type="text" placeholder="Search..." class="h-full w-full px-[15px] border-solid border-[0.8px] border-[#ccc] placeholder:text-[15px] placeholder:text-[#242424cc]">
-            </dialog>
-            <!-- end -->
-            <div class="ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]">
-                <a href="">
+            <button class="ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="showAccountModal()">
                     <i class="fa-solid text-[20px] fa-user"></i>
-                </a>
-            </div>
+            </button>
             <div class="relative ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]">
                 <a href="">
                     <i class="fa-solid text-[20px] fa-heart"></i>
                     <div class="absolute rounded-full bg-[#eb5e37] text-white left-[-2px] bottom-[-2px] w-[15px] h-[15px] text-[10px] grid justify-center">0</div>
                 </a>
             </div>
-            <div class="relative ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]">
-                <a href="">
-                    <i class="fa-solid text-[20px] fa-cart-shopping"></i>
-                    <div class="absolute rounded-full bg-[#eb5e37] text-white left-[-2px] bottom-[-2px] w-[15px] h-[15px] text-[10px] grid justify-center">0</div>
-                </a>
-            </div>
+            <button class="relative ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="showCartModal()">
+                <i class="fa-solid text-[20px] fa-cart-shopping"></i>
+                <div class="absolute rounded-full bg-[#eb5e37] text-white left-[-2px] bottom-[-2px] w-[15px] h-[15px] text-[10px] grid justify-center">0</div>
+            </button>
         </div>
     </header>
     <div class="content bg-[#fafaf7] px-[15px]">
@@ -752,6 +811,105 @@
             </div>
         </div>
     </footer>
+    <div class="menu-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideMenuModal()">
+        <div class="menu-modal-container fixed w-[450px] h-full bg-[#FAFAF7] left-0 text-[#242424]" onclick="stopPropagation(event)">
+            <div class="w-full h-[407.6px] relative px-[50px] py-[50px]">
+                <button class="menu-close-btn absolute bg-white top-[50px] right-[50px] w-[35px] h-[35px] flex justify-center items-center cursor-pointer rounded-full" onclick="hideMenuModal()">
+                    <div class="text-[16px] hover:rotate-90 duration-[0.5s]">✕</div>
+                </button>
+                <div class="mt-[95px]">
+                    <div class="py-[40px] h-[113.44px] w-full cursor-pointer">
+                        <img src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/08/logo.png" alt="" object-fit="fill" class="h-full">
+                    </div>
+                    <ul class="mb-[35px]">
+                        <li class="nav-btn items-center py-[12px] text-[19.5px] hover:text-[#eb5e37] cursor-pointer flex">
+                            Home
+                            <i class="nav-btn-icon ml-[50px] fa-solid fa-caret-right hidden"></i>
+                        </li>
+                        <li class="nav-btn items-center py-[12px] text-[19.5px] hover:text-[#eb5e37] cursor-pointer flex">
+                            Shop
+                            <i class="nav-btn-icon ml-[50px] fa-solid fa-caret-right hidden"></i>
+                        </li>
+                        <li class="nav-btn items-center py-[12px] text-[19.5px] hover:text-[#eb5e37] cursor-pointer flex">
+                            Products
+                            <i class="nav-btn-icon ml-[50px] fa-solid fa-caret-right hidden"></i>
+                        </li>
+                        <li class="nav-btn items-center py-[12px] text-[19.5px] hover:text-[#eb5e37] cursor-pointer flex">
+                            Blog
+                            <i class="nav-btn-icon ml-[50px] fa-solid fa-caret-right hidden"></i>
+                        </li>
+                        <li class="nav-btn items-center py-[12px] text-[19.5px] hover:text-[#eb5e37] cursor-pointer flex">
+                            Page
+                            <i class="nav-btn-icon ml-[50px] fa-solid fa-caret-right hidden"></i>
+                        </li>
+                    </ul>
+                    <div class="grid grid-cols-4 pb-[50px] w-[50%]">
+                        <a class="col-span-1 hover:text-[#eb5e37]" href="">
+                            <i class="text-[18px] fa-brands fa-twitter"></i>
+                        </a>
+                        <a class="col-span-1 hover:text-[#eb5e37]" href="">
+                            <i class="text-[18px] fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="col-span-1 hover:text-[#eb5e37]" href="">
+                            <i class="text-[18px] fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a class="col-span-1 hover:text-[#eb5e37]" href="">
+                            <i class="text-[18px] fa-solid fa-basketball"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.7)] justify-center" onclick="hideSearchModal()">
+        <div class="search-modal-container w-[78vw] h-[192.6px] px-[90px] py-[70px] bg-white mt-[100px] text-[#242424] relative" onclick="stopPropagation(event)">
+            <div class="absolute top-[20px] right-[20px] w-[40px] h-[40px] grid items-center" onclick="hideSearchModal()">
+                <button class="text-[20px] hover:rotate-90 duration-[0.5s]">✕</button>
+            </div>
+            <input type="text" placeholder="Search..." class="h-full w-full px-[15px] border-solid border-[0.8px] border-[#e7e7e7] placeholder:text-[15px] placeholder:text-[#242424cc]">
+        </div>
+    </div>
+    <div class="account-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideAccountModal()">
+        <div class="account-modal-container fixed w-[500px] h-full bg-white right-[0] text-[#242424]" onclick="stopPropagation(event)">
+            <div class="w-full h-full relative px-[30px] pt-[70px]">
+                <div class="absolute top-[20px] right-[30px] border-solid border-[1px] w-[30px] h-[30px] flex justify-center cursor-pointer" onclick="hideAccountModal()">
+                    <button class="text-[16px] hover:rotate-90 duration-[0.5s]">✕</button>
+                </div>
+                <form action="">
+                    <div class="text-[13px] font-semibold mb-[25px]">SIGN IN</div>
+                    <div class="border-[0.8px] w-full h-[40.6px] border-solid mb-[15px]">
+                        <input type="text" placeholder="Name or email*" class="w-full h-full px-[20px] py-[5px] text-[14.5px] placeholder:text-[#242424cc] placeholder:text-[14.5px]">
+                    </div>
+                    <div class="border-[0.8px] w-full h-[40.6px] border-solid">
+                        <input type="text" placeholder="Password*" class="w-full h-full px-[20px] py-[5px] text-[14.5px] placeholder:text-[#242424cc] placeholder:text-[14.5px]">
+                    </div>
+                    <div class="mt-[17px] mb-[30px] text-[12.5px] font-semibold">
+                        <a href="" class="w-[116px] border-b-[2px] border-[#000] hover:text-[#eb5e37] hover:border-[#eb5e37]">Lost your password?</a>
+                    </div>
+                    <div class="flex justify-between">
+                        <button class="w-[208.4px] h-[39px] text-[11.5px] hover:bg-[#eb5e37] bg-black text-white">SIGN IN</button>
+                        <button class="w-[208.4px] h-[39px] text-[11.5px] hover:bg-[#eb5e37] hover:text-white hover:border-none border-[1px] border-solid border-black">CREATE AN ACCOUNT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="cart-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.4)]" onclick="hideCartModal()">
+        <div class="cart-modal-container fixed w-[513.400px] h-full bg-white right-[0] text-[#242424]" onclick="stopPropagation(event)">
+            <div class="w-full h-[407.6px] grid items-center justify-center relative">
+                <div class="absolute top-[20px] right-[30px] border-solid border-[1px] w-[30px] h-[30px] flex justify-center cursor-pointer" onclick="hideCartModal()">
+                    <button class="text-[16px] hover:rotate-90 duration-[0.5s]">✕</button>
+                </div>
+                <div>
+                    <div class="text-[16.5px] mb-[8px]">No products in the cart.</div>
+                    <div class="flex justify-center">
+                        <a href="" class="w-[116px] border-b-[2px] border-[#000] hover:text-[#eb5e37] hover:border-[#eb5e37] text-[14.5px]">Shop all products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
     <script>
         var swiper = new Swiper('.swiper-container', {

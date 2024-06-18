@@ -20,15 +20,23 @@ header {
     display: flex;
 }
 
+.menu-modal.flex .menu-modal-container{
+    animation: menuShow ease 0.5s;
+}
+
+.search-modal.flex .search-modal-container{
+    animation: searchShow ease 0.5s;
+}
+
 .cart-modal.flex .cart-modal-container,
 .account-modal.flex .account-modal-container{
     animation: cartAccountShow ease 0.5s;
 }
 
-.cart-modal.hidden .cart-modal-container,
+/* .cart-modal.hidden .cart-modal-container,
 .account-modal.hidden .account-modal-container {
     animation: cartAccountHide ease 0.5s;
-}
+} */
 
 .outstanding-left {
     display: grid;
@@ -107,6 +115,42 @@ header {
 .footer-above {
     display: grid;
     grid-template-columns: 500.075px 341.45px 259.6px 338.850px;
+}
+
+@keyframes menuShow {
+    from {
+        transform: translateX(-450px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes menuHide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-450px);
+    }
+}
+
+@keyframes searchShow {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes searchHide {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50px);
+    }
 }
 
 @keyframes cartAccountShow {

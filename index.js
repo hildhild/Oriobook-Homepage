@@ -10,6 +10,34 @@ function hideMenuModal() {
     menuModal.classList.add("hidden");
 }
 
+function toggleCategoryDropdown() {
+    var categoryDropdown = document.querySelector(".category-dropdown");
+    if (categoryDropdown.classList.contains("hidden")) {
+        categoryDropdown.classList.remove("hidden");
+        categoryDropdown.classList.add("flex");
+    }
+    else {
+        categoryDropdown.classList.remove("flex");
+        categoryDropdown.classList.add("hidden");
+    }
+}
+
+function toggleOtherCategory() {
+    var otherCategory = document.querySelector(".other-category-dropdown");
+    var otherBtn = document.querySelector(".other-button");
+    if (otherCategory.classList.contains("hidden")) {
+        otherCategory.classList.remove("hidden");
+        otherCategory.classList.add("flex");
+        otherBtn.classList.remove("flex");
+        otherBtn.classList.add("hidden");
+    }
+    else {
+        otherCategory.classList.remove("flex");
+        otherCategory.classList.add("hidden");
+        otherBtn.classList.remove("hidden");
+        otherBtn.classList.add("flex");
+    }
+}
 
 function showSearchModal() {
     var searchModal = document.getElementsByClassName("search-modal")[0];

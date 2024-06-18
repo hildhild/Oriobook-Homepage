@@ -12,13 +12,18 @@ function hideMenuModal() {
 
 function toggleCategoryDropdown() {
     var categoryDropdown = document.querySelector(".category-dropdown");
+    var caretDown = document.querySelector("header .fa-caret-down") || document.querySelector("header .fa-caret-up");
     if (categoryDropdown.classList.contains("hidden")) {
         categoryDropdown.classList.remove("hidden");
         categoryDropdown.classList.add("flex");
+        caretDown.classList.remove("fa-caret-down");
+        caretDown.classList.add("fa-caret-up");
     }
     else {
         categoryDropdown.classList.remove("flex");
         categoryDropdown.classList.add("hidden");
+        caretDown.classList.remove("fa-caret-up");
+        caretDown.classList.add("fa-caret-down");
     }
 }
 

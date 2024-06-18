@@ -28,12 +28,12 @@
     
 </head>
 <body>
-    <header class="w-full h-[100px] bg-[#fff] grid grid-cols-3 py-[30px] px-[60px] relative">
+    <header class="w-full h-[65.7px] xl:h-[100px] bg-[#fff] grid grid-cols-3 py-[15px] xl:py-[30px] px-[15px] xl:px-[60px] relative">
         <div class="flex items-center justify-start col-span-1">
             <button href="" class="mr-[30px] hover:text-[#eb5e37]" onclick="showMenuModal()">
-                <i class="fa-solid fa-bars text-[25px]"></i>
+                <i class="fa-solid fa-bars text-[20px] xl:text-[25px]"></i>
             </button>
-            <button class="flex items-center justify-center text-[#242424] hover:text-[#eb5e37] cursor-pointer" onclick="toggleCategoryDropdown()">
+            <button class="hidden xl:flex items-center justify-center text-[#242424] hover:text-[#eb5e37] cursor-pointer" onclick="toggleCategoryDropdown()">
                 <i class="fa-solid fa-table-cells-large mr-[13px] text-[14px]"></i>
                 <div class="text-[14px]">BROWSE CATEGORY</div>
                 <i class="fa-solid fa-caret-down ml-[15px] text-[12px]"></i>
@@ -45,13 +45,13 @@
             </a>
         </div>
         <div class="flex justify-end items-center col-span-1">
-            <button class="hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="showSearchModal()">
+            <button class="hidden xl:flex hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="showSearchModal()">
                 <i class="fa-solid text-[20px] fa-magnifying-glass"></i>
             </button>
-            <button class="ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="showAccountModal()">
+            <button class="hidden xl:flex ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]" onclick="showAccountModal()">
                     <i class="fa-solid text-[20px] fa-user"></i>
             </button>
-            <div class="relative ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]">
+            <div class="hidden xl:flex relative ml-[18px] hover:text-[#eb5e37] hover:translate-y-[-5px] duration-[0.3s]">
                 <a href="">
                     <i class="fa-solid text-[20px] fa-heart"></i>
                     <div class="absolute rounded-full bg-[#eb5e37] text-white left-[-2px] bottom-[-2px] w-[15px] h-[15px] text-[10px] grid justify-center">0</div>
@@ -63,15 +63,38 @@
             </button>
         </div>
     </header>
-    <div class="content bg-[#fafaf7] px-[15px]">
-        <div class="welcome h-[319px] w-full pt-[110px] pb-[60px] px-[15px]">
-            <img class="absolute top-[246px]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/img.png" alt="">
-            <div class="absolute mx-[24.6px]">
-                <h1 class="text-5xl font-lora mb-[15px]">Welcome to Oriobook</h1>
-                <div class="font-jost text-lg">We stock hundreds of quality books and comics, so you will definitely<br>find what you're looking for.</div>
+    <header class="xl:hidden fixed left-0 right-0 bottom-0 z-50 w-full h-[57.3px] bg-[#fff] grid grid-cols-4 py-[15px] xl:py-[30px] px-[15px] xl:px-[60px]">
+        <div class="col-span-1 grid place-items-center content-center hover:text-[#eb5e37]">
+            <a href="">
+                <i class="fa-solid text-[20px] fa-table-cells-large"></i>
+            </a>
+            <div class="text-[12px] font-semibold">SHOP</div>
+        </div>
+        <button class="col-span-1 grid place-items-center content-center hover:text-[#eb5e37]">
+            <i class="fa-solid text-[20px] fa-user"></i>
+            <div class="text-[12px] font-semibold">ACCOUNT</div>
+        </button>
+        <button class="col-span-1 grid place-items-center content-center hover:text-[#eb5e37]" onclick="showSearchModal()">
+            <i class="fa-solid text-[20px] fa-magnifying-glass"></i>
+            <div class="text-[12px] font-semibold">SEARCH</div>
+        </button>
+        <div class="col-span-1 grid place-items-center content-center hover:text-[#eb5e37]">
+            <a href="" class="relative">
+                <i class="fa-solid text-[20px] fa-heart"></i>
+                <div class="absolute rounded-full bg-[#eb5e37] text-white right-[-12px] top-[-5px] w-[18px] h-[18px] text-[12px] grid justify-center">0</div>
+            </a>
+            <div class="text-[12px] font-semibold">WISHLIST</div>
+        </div>
+    </header>
+    <div class="content bg-[#fafaf7] xl:px-[15px]">
+        <div class="welcome h-[235px] md:h-[269px] xl:h-[319px] w-full xl:pt-[110px] xl:pb-[60px] py-[50px] px-[15px] relative">
+            <img class="absolute left-[14px] xl:left-[8px] top-[75px] md:top-[85px] xl:top-[145px] w-[130px] md:w-[260px]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/img.png" alt="">
+            <div class="absolute xl:mx-[24.6px]">
+                <h1 class="text-[24.5px] md:text-5xl font-lora mb-[25px] md:mb-[40px] xl:mb-[20px]">Welcome to Oriobook</h1>
+                <div class="text-[17.5px]">We stock hundreds of quality books and comics, so you will definitely<br>find what you're looking for.</div>
             </div>
         </div>
-        <div class="outstanding h-[954px] grid grid-cols-2 pb-[110px] mx-[24.6px]">
+        <div class="outstanding h-[954px] grid grid-cols-2 pb-[110px] xl:mx-[24.6px]">
             <div class="col-span-1">
                 <div class="outstanding-left">
                     <div class="relative mx-[15px] mb-[30px] w-[690px] overflow-hidden" onmouseenter="translateX10px(0)" onmouseleave="resetTransform(0)">
@@ -158,9 +181,9 @@
             </div>
         </div>
         <div class="picked-by-reader mx-[24.6px] px-[15px] pb-[65px] h-[688px] grid">
-            <h2 class="flex justify-center font-lora text-4xl h-[36px] mb-[70px]">Picked by Readers</h2>
+            <h2 class="flex justify-center font-lora text-[25px] md:text-[30px] xl:text-[36px] h-[36px] mb-[70px]">Picked by Readers</h2>
             <div class="swiper-container mx-[-4px] w-full">
-                <div class="grid grid-cols-5 swiper-wrapper">
+                <div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 swiper-wrapper">
                     <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(0)" onmouseleave="mouseLeaveBook(0)">
                         <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
                             <img class="book-img-0 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-1.jpg" alt="">
@@ -412,14 +435,14 @@
                 </div>
             </div>
         </div>
-        <div class="monthly-bestseller mx-[24.6px] pb-[115px]">
-            <div class="h-[91.6px] pb-[45px] flex justify-between px-[15px]">
-                <h1 class="font-lora text-[36px]">Monthly Bestseller</h1>
+        <div class="monthly-bestseller xl:mx-[24.6px] pb-[115px] h-[607.2px] overflow-hidden">
+            <div class="md:h-[91.6px] pb-[45px] text-center md:flex md:justify-between px-[15px]">
+                <h1 class="font-lora text-[30px] xl:text-[36px]">Monthly Bestseller</h1>
                 <button class="border-solid border-[0.8px] px-[55px] border-[#24242433] h-[50px] w-[173.662px] text-[13px] text-[#242424] hover:text-white hover:bg-[#eb5e37]">VIEW ALL</button>
             </div>
-            <div class="grid grid-cols-3">
-                <div class="col-span-2 px-[15px] swiper-container-1 ">
-                    <div class="grid grid-cols-3 swiper-wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="md:col-span-2 px-[15px] swiper-container-1 ">
+                    <div class="grid grid-cols-2 md:grid-cols-3 swiper-wrapper">
                         <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(6)" onmouseleave="mouseLeaveBook(6)">
                             <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
                                 <img class="book-img-6 cursor-pointer" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2019/04/product-3.jpg" alt="">
@@ -561,7 +584,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-1 relative mx-[15px] h-[488px] overflow-hidden" onmouseenter="translateX10px(11)" onmouseleave="resetTransform(11)">
+                <div class="md:col-span-1 relative mx-[15px] h-[488px] overflow-hidden" onmouseenter="translateX10px(11)" onmouseleave="resetTransform(11)">
                     <div class="w-[calc(100%+20px)] ml-[-10px] h-full">
                         <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-18.jpg" alt="">
                     </div>
@@ -574,44 +597,44 @@
                 </div>
             </div>
         </div>
-        <div class="lastest-newsletter grid grid-cols-2 mx-[24.6px] items-center">
-            <div class="col-span-1 relative mx-[15px] overflow-hidden" onmouseenter="translateX10px(12)" onmouseleave="resetTransform(12)">
+        <div class="lastest-newsletter grid grid-cols-1 md:grid-cols-2 xl:mx-[24.6px] items-center">
+            <div class="col-span-1 relative mx-[15px] overflow-hidden mb-[15px] md:mb-0" onmouseenter="translateX10px(12)" onmouseleave="resetTransform(12)">
                 <div class="w-[calc(100%+20px)] ml-[-10px]">
                     <img class="translateX10px w-full duration-[0.7s]" src="https://wpbingosite.com/wordpress/oriobook/wp-content/uploads/2023/07/banner-26.jpg" alt="">
                 </div>
             </div>
-            <div class="col-span-1 pr-[15px] pl-[105px]">
+            <div class="col-span-1 pr-[15px] pl-[15px] xl:pl-[105px]">
                 <div class="text-[16px] mb-[20px]">LASTEST NEWSLETTER</div>
-                <div class="font-lora text-[41px] mb-[20px]">Get a 20% discount on your first order!</div>
+                <div class="font-lora text-[20px] md:text-[25px] xl:text-[41px] mb-[20px]">Get a 20% discount on your<br>first order!</div>
                 <div class="mb-[65px] text-[#242424cc] text-[15px]">To see how we may use your information, take a look at our <a href="" class="hover:text-[#eb5e37] hover:border-b-[#eb5e37] border-b-[1.8px] border-[#000]">privacy policy.</a></div>
-                <form action="" class="border-b-[0.8px] border-[#000] grid grid-cols-11 h-[56px] content-center">
-                    <input type="text" class="bg-[#FAFAF7] col-span-9 text-[15px] text-[#000] placeholder:text-[14px] placeholder:text-[#242424cc]" placeholder="Enter your email...">
-                    <button class="flex justify-between col-span-2 hover:text-[#eb5e37] items-center text-[13.5px] text-[#242424]">
+                <form action="" class="border-b-[0.8px] border-[#000] flex h-[56px] justify-between w-full">
+                    <input type="text" class="bg-[#FAFAF7] text-[15px] text-[#000] placeholder:text-[14px] placeholder:text-[#242424cc] w-[calc(100%-112px)]" placeholder="Enter your email...">
+                    <button class="flex justify-between hover:text-[#eb5e37] items-center text-[13.5px] text-[#242424] w-[112px]">
                         <i class="fa-regular fa-envelope mr-[15px] text-[20px]"></i>
-                        SUBSCRIBE
+                        <div>SUBSCRIBE</div>
                     </button>
                 </form>
             </div>
         </div>
-        <div class="policies mx-[24.6px] pt-[115px] pb-[190px] h-[508px] grid grid-cols-4">
-            <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
+        <div class="policies xl:mx-[24.6px] pt-[115px] pb-[190px] md:h-[508px] grid grid-cols-1 md:grid-cols-4">
+            <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center mb-[50px] md:mb-0">
                 <i class="icon-shake fa-solid text-[40px] fa-truck mb-[30px]"></i>
-                <div class="font-lora text-[22px] mb-[20px]">Free Standard Delivery</div>
+                <div class="font-lora text-[17px] xl:text-[22px] mb-[20px]">Free Standard Delivery</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
-            <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
+            <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center mb-[50px] md:mb-0">
                 <i class="icon-shake fa-solid text-[40px] fa-rotate-left mb-[30px]"></i>
-                <div class="font-lora text-[22px] mb-[20px]">Free Easy Returns</div>
+                <div class="font-lora text-[17px] xl:text-[22px] mb-[20px]">Free Easy Returns</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
-            <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
+            <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center mb-[50px] md:mb-0">
                 <i class="icon-shake fa-solid text-[40px] fa-book-open mb-[30px]"></i>
-                <div class="font-lora text-[22px] mb-[20px]">6 Million Books Availabley</div>
+                <div class="font-lora text-[17px] xl:text-[22px] mb-[20px]">6 Million Books Availabley</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
             <div class="col-span-1 px-[15px] pt-[12px] grid place-items-center">
                 <i class="icon-shake fa-solid text-[40px] fa-percent mb-[30px]"></i>
-                <div class="font-lora text-[22px] mb-[20px]">Special Discounts</div>
+                <div class="font-lora text-[17px] xl:text-[22px] mb-[20px]">Special Discounts</div>
                 <div class="text-center text-[15px] text-[#242424cc]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </div>
         </div>
@@ -660,57 +683,57 @@
             </div>
         </div>
     </div>
-    <footer class="h-[491.5px] mx-[24.6px]">
-        <div class="footer-above h-[318px] mb-[80px]">
-            <div class="px-[15px]">
+    <footer class="md:h-[491.5px] xl:mx-[24.6px] mb-[60px] md:mb-[22px] xl:mb-0 w-full">
+        <div class="footer-above md:h-[318px] mb-[80px] w-full grid grid-cols-1 md:grid-cols-[34.73%_23.71%_18.03%_23.53%]">
+            <div class="px-[15px] mb-[50px] md:mb-0">
                 <div class="font-bold text-[22px] text-[#242424] font-lora pb-[50px] mb-[20px]">Customer Services</div>
-                <div class="text-[#242424cc] text-[15px] mb-[20px] h-[28.5px]">Got Question? Call us 24/7</div>
+                <div class="text-[#242424cc] text-[14.5px] mb-[20px] h-[28.5px]">Got Question? Call us 24/7</div>
                 <div class="mb-[20px] h-[53px]">
                     <a href="" class="text-[28px] text-[#eb5e37] font-bold">(+707) 450-25-205</a>
                 </div>
-                <div class="text-[#242424cc] text-[15px] h-[20.5px] mb-[20px]">268 St, South New York/NY 98944, United States</div>
-                <a href="mailto:oriobook@domain.com" class="text-[#242424cc] text-[15px]">oriobook@domain.com</a>
+                <div class="text-[#242424cc] text-[14.5px] h-[20.5px] mb-[20px]">268 St, South New York/NY 98944, United States</div>
+                <a href="mailto:oriobook@domain.com" class="text-[#242424cc] text-[14.5px]">oriobook@domain.com</a>
             </div>
-            <div class="px-[15px]">
+            <div class="px-[15px] mb-[50px] md:mb-0">
                 <div class="font-bold text-[22px] text-[#242424] font-lora pb-[50px]">Publishers</div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Norstedt's history</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Norstedt's history</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Norstedts Publishing Group</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Norstedts Publishing Group</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Norstedt's Agency</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Norstedt's Agency</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">The book club</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">The book club</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Environment and sustainability</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Environment and sustainability</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Work with us</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Work with us</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Book Fairs</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Book Fairs</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Script</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Script</a>
                 </div>
             </div>
-            <div class="px-[15px]">
+            <div class="px-[15px] mb-[50px] md:mb-0">
                 <div class="font-bold text-[22px] text-[#242424] font-lora pb-[50px]">Information</div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">About us</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">About us</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Our services</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Our services</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Latest news</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Latest news</a>
                 </div>
                 <div class="h-[28.5px] pb-[3px]">
-                    <a class="text-[#242424cc] text-[15px] hover:text-[#eb5e37]" href="">Best sellers</a>
+                    <a class="text-[#242424cc] text-[14.5px] hover:text-[#eb5e37]" href="">Best sellers</a>
                 </div>
             </div>
             <div class="px-[15px]">
@@ -733,16 +756,15 @@
             </div>
         </div>
         <div class="px-[15px]">
-            <div class="footer-under py-[24px] border-t-[1px] items-center justify-center flex h-[93.5px] text-[15px] text-[#242424cc]">
+            <div class="footer-under xl:py-[24px] border-t-[1px] items-center justify-center flex h-[55.5px] xl:h-[93.5px] text-[15px] text-[#242424cc]">
                 Copyright © 2023 Oriobook | Powered by Wpbingo
             </div>
         </div>
     </footer>
 
-    <div class="hidden back-to-top fixed bottom-[70px] right-[30px] bg-[#000] text-[#fff] w-[50px] h-[50px] place-content-center cursor-pointer hover:bg-[#eb5e37]">
+    <div class="back-to-top hidden fixed bottom-[70px] right-[30px] bg-[#000] text-[#fff] w-[40px] xl:w-[50px] h-[40px] xl:h-[50px] place-content-center cursor-pointer hover:bg-[#eb5e37]">
         <i class="fa-solid fa-arrow-up text-[18px]"></i>
     </div>
-
     <div class="category-dropdown z-5 absolute top-[100px] left-[110px] w-[250px] hidden bg-white px-[30px]">
         <div class="divide-gray-100 divide-y w-full">
             <div class="h-[51.4px] w-full py-[11.7px]">
@@ -823,7 +845,7 @@
             </div>
         </div>
     </div>
-    <div class="menu-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideMenuModal()">
+    <div class="menu-modal z-50 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideMenuModal()">
         <div class="menu-modal-container fixed w-[450px] h-full bg-[#FAFAF7] left-0 text-[#242424]" onclick="stopPropagation(event)">
             <div class="w-full h-[407.6px] relative px-[50px] py-[50px]">
                 <button class="menu-close-btn absolute bg-white top-[50px] right-[50px] w-[35px] h-[35px] flex justify-center items-center cursor-pointer rounded-full" onclick="hideMenuModal()">
@@ -873,7 +895,7 @@
             </div>
         </div>
     </div>
-    <div class="search-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.7)] justify-center" onclick="hideSearchModal()">
+    <div class="search-modal z-50 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.7)] justify-center" onclick="hideSearchModal()">
         <div class="search-modal-container w-[78vw] h-[192.6px] px-[90px] py-[70px] bg-white mt-[100px] text-[#242424] relative" onclick="stopPropagation(event)">
             <div class="absolute top-[20px] right-[20px] w-[40px] h-[40px] grid items-center" onclick="hideSearchModal()">
                 <button class="text-[20px] hover:rotate-90 duration-[0.5s]">✕</button>
@@ -881,7 +903,7 @@
             <input type="text" placeholder="Search..." class="h-full w-full px-[15px] border-solid border-[0.8px] border-[#e7e7e7] placeholder:text-[15px] placeholder:text-[#242424cc]">
         </div>
     </div>
-    <div class="account-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideAccountModal()">
+    <div class="account-modal z-50 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideAccountModal()">
         <div class="account-modal-container fixed w-[500px] h-full bg-white right-[0] text-[#242424]" onclick="stopPropagation(event)">
             <div class="w-full h-full relative px-[30px] pt-[70px]">
                 <div class="absolute top-[20px] right-[30px] border-solid border-[1px] w-[30px] h-[30px] flex justify-center cursor-pointer" onclick="hideAccountModal()">
@@ -906,7 +928,7 @@
             </div>
         </div>
     </div>
-    <div class="cart-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.4)]" onclick="hideCartModal()">
+    <div class="cart-modal z-50 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.4)]" onclick="hideCartModal()">
         <div class="cart-modal-container fixed w-[513.400px] h-full bg-white right-[0] text-[#242424]" onclick="stopPropagation(event)">
             <div class="w-full h-[407.6px] grid items-center justify-center relative">
                 <div class="absolute top-[20px] right-[30px] border-solid border-[1px] w-[30px] h-[30px] flex justify-center cursor-pointer" onclick="hideCartModal()">
@@ -925,17 +947,40 @@
     
     <script>
         var swiper = new Swiper('.swiper-container', {
-          slidesPerView: 5,
-          spaceBetween: 15,
-          loop: true,
-          keyboard: true,
-        });
-        var swiper1 = new Swiper('.swiper-container-1', {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 15,
             loop: true,
             keyboard: true,
-          });
+            breakpoints: {
+                // when window width is >= 640px
+                768: {
+                slidesPerView: 4,
+                spaceBetween: 15
+                },
+                // when window width is >= 768px
+                1280: {
+                slidesPerView: 5,
+                spaceBetween: 15
+                }
+            }
+        }
+        );
+        var swiper1 = new Swiper('.swiper-container-1', {
+            slidesPerView: 2,
+            spaceBetween: 15,
+            loop: true,
+            keyboard: true,
+            breakpoints: {
+                // when window width is >= 768px
+                1280: {
+                slidesPerView: 3,
+                spaceBetween: 15
+                }
+            }
+        }
+        );
+
+        
     </script>
     <script src="./index.js"></script>
 </body>

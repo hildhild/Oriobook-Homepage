@@ -157,7 +157,7 @@
                 </div>
             </div>
         </div>
-        <div class="picked-by-reader mx-[24.6px] px-[15px] pb-[65px] h-[688px]">
+        <div class="picked-by-reader mx-[24.6px] px-[15px] pb-[65px] h-[688px] grid">
             <h2 class="flex justify-center font-lora text-4xl h-[36px] mb-[70px]">Picked by Readers</h2>
             <div class="swiper-container mx-[-4px] w-full">
                 <div class="grid grid-cols-5 swiper-wrapper">
@@ -418,7 +418,7 @@
                 <button class="border-solid border-[0.8px] px-[55px] border-[#24242433] h-[50px] w-[173.662px] text-[13px] text-[#242424] hover:text-white hover:bg-[#eb5e37]">VIEW ALL</button>
             </div>
             <div class="grid grid-cols-3">
-                <div class="col-span-2 px-[15px] swiper-container-1">
+                <div class="col-span-2 px-[15px] swiper-container-1 ">
                     <div class="grid grid-cols-3 swiper-wrapper">
                         <div class="col-span-1 h-[517px] px-[4px] swiper-slide" onmouseenter="mouseEnterBook(6)" onmouseleave="mouseLeaveBook(6)">
                             <div class="p-[40px] mb-[14px] bg-[#EDEDE8] relative overflow-hidden">
@@ -739,6 +739,9 @@
         </div>
     </footer>
 
+    <div class="hidden back-to-top fixed bottom-[70px] right-[30px] bg-[#000] text-[#fff] w-[50px] h-[50px] place-content-center cursor-pointer hover:bg-[#eb5e37]">
+        <i class="fa-solid fa-arrow-up text-[18px]"></i>
+    </div>
 
     <div class="category-dropdown z-5 absolute top-[100px] left-[110px] w-[250px] hidden bg-white px-[30px]">
         <div class="divide-gray-100 divide-y w-full">
@@ -820,7 +823,7 @@
             </div>
         </div>
     </div>
-    <div class="menu-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideMenuModal()">
+    <div class="menu-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideMenuModal()">
         <div class="menu-modal-container fixed w-[450px] h-full bg-[#FAFAF7] left-0 text-[#242424]" onclick="stopPropagation(event)">
             <div class="w-full h-[407.6px] relative px-[50px] py-[50px]">
                 <button class="menu-close-btn absolute bg-white top-[50px] right-[50px] w-[35px] h-[35px] flex justify-center items-center cursor-pointer rounded-full" onclick="hideMenuModal()">
@@ -870,7 +873,7 @@
             </div>
         </div>
     </div>
-    <div class="search-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.7)] justify-center" onclick="hideSearchModal()">
+    <div class="search-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.7)] justify-center" onclick="hideSearchModal()">
         <div class="search-modal-container w-[78vw] h-[192.6px] px-[90px] py-[70px] bg-white mt-[100px] text-[#242424] relative" onclick="stopPropagation(event)">
             <div class="absolute top-[20px] right-[20px] w-[40px] h-[40px] grid items-center" onclick="hideSearchModal()">
                 <button class="text-[20px] hover:rotate-90 duration-[0.5s]">✕</button>
@@ -878,7 +881,7 @@
             <input type="text" placeholder="Search..." class="h-full w-full px-[15px] border-solid border-[0.8px] border-[#e7e7e7] placeholder:text-[15px] placeholder:text-[#242424cc]">
         </div>
     </div>
-    <div class="account-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideAccountModal()">
+    <div class="account-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)]" onclick="hideAccountModal()">
         <div class="account-modal-container fixed w-[500px] h-full bg-white right-[0] text-[#242424]" onclick="stopPropagation(event)">
             <div class="w-full h-full relative px-[30px] pt-[70px]">
                 <div class="absolute top-[20px] right-[30px] border-solid border-[1px] w-[30px] h-[30px] flex justify-center cursor-pointer" onclick="hideAccountModal()">
@@ -903,7 +906,7 @@
             </div>
         </div>
     </div>
-    <div class="cart-modal fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.4)]" onclick="hideCartModal()">
+    <div class="cart-modal z-100 fixed hidden top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.4)]" onclick="hideCartModal()">
         <div class="cart-modal-container fixed w-[513.400px] h-full bg-white right-[0] text-[#242424]" onclick="stopPropagation(event)">
             <div class="w-full h-[407.6px] grid items-center justify-center relative">
                 <div class="absolute top-[20px] right-[30px] border-solid border-[1px] w-[30px] h-[30px] flex justify-center cursor-pointer" onclick="hideCartModal()">

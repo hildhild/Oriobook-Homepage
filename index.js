@@ -241,4 +241,28 @@ function mouseLeavePicture(index) {
     picture[index].style.transform = "none";
 }
 
+const backToTopBtn = document.querySelector(".back-to-top");
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    backToTopBtn.classList.remove("hidden");
+    backToTopBtn.classList.add("grid");
+  } else if (backToTopBtn.classList.contains("grid") ){ 
+    backToTopBtn.classList.remove("grid");
+    backToTopBtn.classList.add("hidden");
+  }
+}
+
+backToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })}
+);
+
+
 

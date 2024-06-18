@@ -38,7 +38,7 @@ header {
     animation: cartAccountHide ease 0.5s;
 } */
 
-.outstanding-left {
+/* .outstanding-left {
     display: grid;
     grid-template-rows: 378px 466px;
 }
@@ -46,7 +46,7 @@ header {
 .outstanding-right {
     display: grid;
     grid-template-rows: 496px 348px;
-}
+} */
 
 
 @media only screen and (max-width: 768px) {
@@ -57,8 +57,7 @@ header {
     .swiper-container-1 .swiper-slide:nth-child(-n+2) {
         display: block;
     
-    }
-    
+    }  
 }
 
 @media only screen and (min-width: 768px) {
@@ -68,9 +67,7 @@ header {
     
     .swiper-container-1 .swiper-slide:nth-child(-n+3) {
         display: block;
-    
     }
-
 }
 
 
@@ -81,14 +78,8 @@ header {
     
     .swiper-container-1 .swiper-slide:nth-child(-n+3) {
         display: block;
-    
     }
-
 }
-
-
-
-
 
 .swiper-container, .swiper-container-1 {
     overflow: hidden;
